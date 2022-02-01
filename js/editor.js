@@ -7,7 +7,7 @@ var textItem = new PointText({
   point: new Point(20, 30),
   fillColor: "black",
   strokeColor: "black",
-  strokeWidth: 3,
+  strokeWidth: 2,
 });
 
 
@@ -21,7 +21,7 @@ function onMouseDown(event) {
     segments: [event.point],
     strokeColor: "black",
     fullySelected: true,
-    strokeWidth: 4,
+    strokeWidth: 2,
   });
 }
 
