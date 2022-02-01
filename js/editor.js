@@ -1,41 +1,7 @@
 var path;
 
 
-function loadAndDrawImage(url)
-{
-	var src= document.getElementById("workspace")
-	src.style.background="url(" + url + ")"
-	src.style.backgroundSize="cover"
-	src.style.backgroundRepeat="no-repeat"
 
-}
-loadAndDrawImage("https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80");
-
-var fileChooser = document.getElementById('fileChooser');
-
-fileChooser.addEventListener('change', handleFileSelect, false);
-
-function handleFileSelect(event)
-{
-	var files = event.target.files;
-
-	if(files.length === 0)
-	{
-		return;
-	}
-
-	var file = files[0];
-
-	if(file.type !== '' && !file.type.match('image.*'))
-	{
-		return;
-	}
-	   window.URL = window.URL || window.webkitURL;
-
-	   var imageURL = window.URL.createObjectURL(file);
-
-	   loadAndDrawImage(imageURL);
-}
 
 var textItem = new PointText({
   point: new Point(20, 30),
